@@ -1,34 +1,38 @@
 ---
-- apt_repository:
-    repo: "ppa:gencfsm/ppa" # for gnome-encfs-manager
+- name: install repo for gnome-encfs-manager
+  apt_repository:
+    repo: "ppa:gencfsm/ppa"
+
+- name: install crypto tools
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - encfs
+    - ecryptfs-utils
+    - gnome-encfs-manager
+
+
+- name: install repo for y-ppa-manager
+  apt_repository:
+    repo: "ppa:webupd8team/y-ppa-manager"
+
+- name: install package management software
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - gdebi
+    - ppa-purge
+    - apt-file
+    - y-ppa-manager
+
 
 - apt:
     name: "{{ item }}"
   with_items:
-    - encfs
-    - gnome-encfs-manager
-    - ecryptfs-utils
-
-# - name: install miscellaneous software
-#   apt:
-#     name: "{{ item }}"
-#     state: installed
-#   with_items:
-#     - gdebi
-#     - y-ppa-manager
-#     - ppa-purge
-#     - apt-file
-
-#     - gparted
-#     - unetbootin
-
-#     - backintime-gnome # backup tool
-
-#     - crudini # ini files manipulation
-
-#     - gnupg1-curl", # for fetching APT keys over HTTPS
-
-#     # not available on 16.10?
-#     # "gnome-schedule", # GUI for Cron
-
-#     
+    - gparted
+    - unetbootin
+    - backintime-gnome # backup tool
+    - crudini # ini files manipulation
+    - gnupg1-curl # for fetching APT keys over HTTPS
+    
+    # "gnome-schedule", # GUI for Cron # TODO not available since16.10?
