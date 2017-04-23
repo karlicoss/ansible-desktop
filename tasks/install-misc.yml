@@ -1,7 +1,6 @@
 ---
 - apt_repository:
     repo: 'ppa:alexx2000/doublecmd'
-    state: present
 
 - apt:
     name: doublecmd-gtk
