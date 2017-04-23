@@ -1,0 +1,13 @@
+---
+- name: install essential apps
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - git
+    - mercurial
+
+    - less
+    - vim
+    - emacs
+
+    - mc
+    - zsh

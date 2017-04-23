@@ -10,6 +10,8 @@
 
   tasks:
     - debug: msg=hello
+    - include: tasks/install-initial.yml
+    - include: tasks/install-tex.yml
   #   - include: tasks/base.yml tags=base
   #   - include: tasks/apps.yml tags=apps
   #   - include: tasks/zsh.yml tags=zsh

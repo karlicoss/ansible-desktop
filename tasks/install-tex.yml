@@ -1,0 +1,26 @@
+---
+- name: install Latex-related stuff
+  apt:
+    pkg: "{{ item }}"
+    install_recommends: no # prevents installing tons of latex documentation
+    state: installed
+  with_items:
+    - texlive
+    - texlive-fonts-recommended
+    - texlive-fonts-extra
+    - texlive-lang-cyrillic
+    - texlive-latex-extra
+    - texlive-latex-recommended
+    - texlive-science
+    - texlive-math-extra
+    - texlive-metapost
+    - texlive-pictures
+    - texlive-generic-extra
+    - texlive-lang-greek
+    - texlive-xetex
+
+    - texlive-bibtex-extra
+    - biber
+
+    - lmodern
+    - latexmk
