@@ -1,21 +1,4 @@
 ---
-- name: install repo for gnome-encfs-manager
-  apt_repository:
-    repo: "ppa:gencfsm/ppa"
-
-- name: install crypto tools
-  apt:
-    name: "{{ item }}"
-  with_items:
-    - encfs
-    - ecryptfs-utils
-    - gnome-encfs-manager
-
-
-- name: install repo for y-ppa-manager
-  apt_repository:
-    repo: "ppa:webupd8team/y-ppa-manager"
-
 - name: install media & entertainment software
   apt:
     name: "{{ item }}"

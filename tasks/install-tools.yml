@@ -2,7 +2,6 @@
 - name: install repo for gnome-encfs-manager
   apt_repository:
     repo: "ppa:gencfsm/ppa"
-
 - name: install crypto tools
   apt:
     name: "{{ item }}"
@@ -15,15 +14,14 @@
 - name: install repo for y-ppa-manager
   apt_repository:
     repo: "ppa:webupd8team/y-ppa-manager"
-
 - name: install package management software
   apt:
     name: "{{ item }}"
   with_items:
+    - y-ppa-manager
     - gdebi
     - ppa-purge
     - apt-file
-    - y-ppa-manager
 
 
 - apt:

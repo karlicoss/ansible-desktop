@@ -1,17 +1,21 @@
 ---
 - apt_repository:
     repo: 'ppa:webupd8team/java' # oracle java installer
-
-- apt:
+- name: Accept Oracle license
+  shell: echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+- name: Install Java 7 & 8
+  apt:
     name: "{{ item }}"
   with_items:
     - oracle-java7-installer
     - oracle-java8-installer
 
+
 - apt_repository:
     repo: 'ppa:webupd8team/sublime-text-3'
 - apt:
     name: sublime-text-installer
+
 
 - name: install apps for software development
   apt:

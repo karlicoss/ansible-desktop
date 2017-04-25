@@ -1,18 +1,21 @@
 ---
 - apt_key:
     url: https://dl-ssl.google.com/linux/linux_signing_key.pub
-
 - apt_repository:
     repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-
 - apt:
     name: google-chrome-stable
+
     
+- apt_repository:
+    repo: "deb http://archive.canonical.com/ubuntu {{ ansible_lsb.codename }} partner"
+- apt:
+    name: skype
+
+
 - apt:
     name: "{{ item }}"
   with_items:
-    - skype # TODO needs restricted repo?
-
     - caja-dropbox
 
     - qbittorrent
