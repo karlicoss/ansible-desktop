@@ -1,0 +1,58 @@
+---
+- name: install Python and PIP packages
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - python-pip
+    - python3-pip
+    - python-sphinx
+# TODO python3.6?
+# TODO install rest via PIP?
+# TODO figure out how to keep packages consistent?
+# 'ipython3', 'ipython3-notebook',
+#     'python3-matplotlib',
+#     'python3-nose',
+#     'libblas-dev', 'liblapack-dev',
+
+# pandas
+# TODO bitbucket
+
+# mypy ????
+
+# pip3 install joe
+
+# PACKAGES_2 = [
+#     'pygithub3', # github backup tool
+# ]
+
+# # TODO manually? https://bitbucket.org/dwaring87/rtm-cli/
+
+# PACKAGES_3 = [
+#     # Crontab API for Python
+#     'crontab',
+
+#     # command line combinators
+#     'plumbum',
+
+#     # @overrides decorator
+#     'overrides',
+
+#     # notifications client for Python
+#     'hg+https://bitbucket.org/takluyver/pynotify2#egg=notify2-3.1.1', # TODO replace with pip version once it is available
+
+#     # Remember the milk API wrapper
+#     # TODO do I need my version from Bitbucket?
+#     'pyrtm',
+
+
+#     'ipython',
+#     'jupyter',
+
+#     # git version is better because of newer typeshed
+#     # 'mypy',
+#     'git+git://github.com/python/mypy.git',
+#     'typing',
+# ]
+
+# print("sudo pip  install " + ' '.join('"' + p + '"' for p in PACKAGES_2))
+# print("sudo pip3 install " + ' '.join('"' + p + '"' for p in PACKAGES_3))
