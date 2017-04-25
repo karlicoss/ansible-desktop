@@ -10,7 +10,7 @@
 
   tasks:
     - debug: msg=hello
-    - include: tasks/install-initial.yml
+    - include: tasks/install-essential.yml
     - include: tasks/install-tools.yml
     - include: tasks/install-misc.yml
     - include: tasks/install-internet.yml

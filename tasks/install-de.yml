@@ -1,0 +1,19 @@
+---
+# - name: install repo for gnome-encfs-manager
+#   apt_repository:
+#     repo: "ppa:gencfsm/ppa"
+
+- name: install DE goodiness
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - synapse # TODO PPA? TODO is it still developed?
+    # guake # TODO always run ipython in guake?
+    # terminator
+    # devilspie # TODO no need anymore?
+
+    - caffeine # prevents screensaver
+    # conky
+
+    # "compizconfig-settings-manager",
+    # TODO alarm clock applet

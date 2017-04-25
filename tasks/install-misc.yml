@@ -5,28 +5,13 @@
 - apt:
     name: doublecmd-gtk
 
-# - name: install miscellaneous software
-#   apt:
-#     pkg: "{{ item }}"
-#     install_recommends: no # prevents installing tons of latex documentation
-#     state: installed
-#   with_items:
-#     - texlive
-#     - texlive-fonts-recommended
-#     - texlive-fonts-extra
-#     - texlive-lang-cyrillic
-#     - texlive-latex-extra
-#     - texlive-latex-recommended
-#     - texlive-science
-#     - texlive-math-extra
-#     - texlive-metapost
-#     - texlive-pictures
-#     - texlive-generic-extra
-#     - texlive-lang-greek
-#     - texlive-xetex
+- apt:
+    pkg: "{{ item }}"
+  with_items:
+    - hunspell
+    - hunspell-ru
 
-#     - texlive-bibtex-extra
-#     - biber
+    - pdfshuffler # GUI for shuffling and merging PDF files
+    - markdown
 
-#     - lmodern
-#     - latexmk
+    - motion

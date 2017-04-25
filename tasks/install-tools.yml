@@ -34,5 +34,15 @@
     - backintime-gnome # backup tool
     - crudini # ini files manipulation
     - gnupg1-curl # for fetching APT keys over HTTPS
-    
+    - mutt # cli mail client
+
+    - virtualbox
+    - virtualbox-guest-additions-iso # shared folder
+    - virtualbox-guest-dkms
+    - virtualbox-guest-utils # necessary for high resolution for some reason
+    - virtualbox-guest-x11
+
+    - wine-stable
+
+    # "gconf-editor",
     # "gnome-schedule", # GUI for Cron # TODO not available since16.10?
