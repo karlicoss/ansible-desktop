@@ -1,0 +1,56 @@
+---
+- apt_repository:
+    repo: 'ppa:webupd8team/java' # oracle java installer
+
+- apt:
+    name: "{{ item }}"
+  with_items:
+    - oracle-java7-installer
+    - oracle-java8-installer
+
+- apt_repository:
+    repo: 'ppa:webupd8team/sublime-text-3'
+- apt:
+    name: sublime-text-installer
+
+- name: install apps for software development
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - vim
+    - emacs24 # TODO 2.5? TODO spacemacs
+
+    - git
+    - git-cola
+
+    - subversion
+
+    - mercurial
+    - tortoisehg
+    - hg-fast-export
+
+    - meld
+    - colordiff
+    - ack-grep
+
+    - make
+    - automake
+    - cmake
+    - ant
+    - maven
+    
+    - clang # TODO which version?
+    - cgdb
+    - nemiver
+    - valgrind
+
+    - visualvm
+
+    - yasm
+
+    - sqlitebrowser
+
+    - curl
+    - httpie
+
+    - pandoc

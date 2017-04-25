@@ -15,6 +15,9 @@
     - include: tasks/install-misc.yml
     - include: tasks/install-internet.yml
     - include: tasks/install-python.yml
+    - include: tasks/install-de.yml
+    - include: tasks/install-dev.yml
+    - include: tasks/install-media.yml
     - include: tasks/install-tex.yml
   #   - include: tasks/base.yml tags=base
   #   - include: tasks/apps.yml tags=apps
